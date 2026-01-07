@@ -11,14 +11,14 @@ try (Connection con = DBconnection.getConnection()) {
     ps.setInt(1, orderId);
     ResultSet rs = ps.executeQuery();
     
-//     if (rs.next()) {
-//         amount = rs.getDouble(1);
-//     }
-    amount = 1.00;
+    if (rs.next()) {
+        amount = rs.getDouble(1);
+    }
+   
     
 }
 
-String upiId = "8867262635@ybl"; // ✅ REAL UPI ID
+String upiId = "9036347478@kotak"; // ✅ REAL UPI ID
 String payeeName = "Food Delivery App";
 String note = "Order ID " + orderId;
 
